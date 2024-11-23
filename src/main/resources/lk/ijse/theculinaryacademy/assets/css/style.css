@@ -1,0 +1,51 @@
+.pane1 {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-border-color: #dbdbdb;
+    -fx-border-radius: 20;
+    -fx-border-width: 1;
+}
+
+.table {
+    -fx-background-color: white;
+    -fx-background-radius: 5 5 20 20;
+    -fx-border-color: #dbdbdb;
+    -fx-border-radius: 5 5 20 20;
+    -fx-border-width: 1;
+}
+
+.title-background {
+    -fx-background-color: white;
+    -fx-background-radius: 20 20 0 0;
+    -fx-border-color: #dbdbdb;
+    -fx-border-width: 1;
+    -fx-border-radius: 20 20 0 0;
+}
+
+.cart-item-container {
+    -fx-background-color: white;
+    -fx-border-color: #dbdbdb;
+    -fx-border-width: 1;
+}
+
+.cart-item-container:hover {
+    -fx-background-color: #f9f9f9;
+}
+
+.field1 {
+    -fx-pref-height: 30;
+    -fx-background-radius: 10;
+}
+
+.btn{
+    -fx-background-color: #0cf08d;
+    -fx-border-color: #009e59;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+}
+
+.btn:hover{
+    -fx-background-color: #5afab4 ;
+}
