@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.theculinaryacademy.controller.AddUserController">
+   <children>
+      <Label layoutX="252.0" layoutY="89.0" text="Register Details">
+         <font>
+            <Font name="Unispace-Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="287.0" layoutY="163.0" prefHeight="30.0" text="Username">
+         <font>
+            <Font name="Unispace-Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="285.0" layoutY="212.0" prefHeight="30.0" text="Password">
+         <font>
+            <Font name="Unispace-Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="337.0" layoutY="367.0" onAction="#btnRegisterClickOnAction" prefHeight="40.0" prefWidth="126.0" ripplerFill="#00ffea" styleClass="login-btn" stylesheets="@../assets/css/login.css" text="Register" textFill="WHITE">
+         <font>
+            <Font name="Unispace-Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="28.0" layoutY="25.0" onAction="#btnBackToLoginClickOnAction" prefHeight="30.0" prefWidth="133.0" ripplerFill="#00ffea" styleClass="login-btn" stylesheets="@../assets/css/login.css" text="Back To Login" textFill="WHITE">
+         <font>
+            <Font name="Unispace-Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtUserName" layoutX="380.0" layoutY="163.0" prefWidth="200.0" promptText="Enter User Name" styleClass="field1" stylesheets="@../assets/css/style.css" />
+      <TextField fx:id="txtPw" layoutX="380.0" layoutY="212.0" prefWidth="200.0" promptText="Enter Password" styleClass="field1" stylesheets="@../assets/css/style.css" />
+      <TextField fx:id="txtRePw" layoutX="380.0" layoutY="261.0" prefWidth="200.0" promptText="Re-Enter Password" styleClass="field1" stylesheets="@../assets/css/style.css" />
+      <Label layoutX="196.0" layoutY="261.0" prefHeight="30.0" text="Re-Enter PassWord">
+         <font>
+            <Font name="Unispace-Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="285.0" layoutY="308.0" prefHeight="30.0" text="Job Role">
+         <font>
+            <Font name="Unispace-Bold" size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceJobRole" layoutX="380.0" layoutY="310.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

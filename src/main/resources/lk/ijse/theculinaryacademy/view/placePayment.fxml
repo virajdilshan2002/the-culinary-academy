@@ -142,7 +142,7 @@
                   <Font name="Unispace-Bold" size="20.0" />
                </font>
             </Label>
-            <JFXButton layoutX="240.0" layoutY="217.0" prefHeight="30.0" prefWidth="100.0" styleClass="btn" stylesheets="@../assets/css/style.css" text="Pay">
+            <JFXButton layoutX="240.0" layoutY="217.0" onAction="#btnPayClickOnAction" prefHeight="30.0" prefWidth="100.0" styleClass="btn" stylesheets="@../assets/css/style.css" text="Pay">
                <font>
                   <Font name="Unispace-Bold" size="15.0" />
                </font>

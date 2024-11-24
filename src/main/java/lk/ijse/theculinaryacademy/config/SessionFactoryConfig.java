@@ -15,6 +15,10 @@ public class SessionFactoryConfig {
         sessionFactory = new MetadataSources(new StandardServiceRegistryBuilder()
                 .loadProperties("hibernate.properties").build())
                 .addAnnotatedClass(Student.class)
+                .addAnnotatedClass(User.class)
+                .addAnnotatedClass(Course.class)
+                .addAnnotatedClass(Payment.class)
+                .addAnnotatedClass(StudentCourseDetail.class)
                 .getMetadataBuilder()
                 .build().buildSessionFactory();
 

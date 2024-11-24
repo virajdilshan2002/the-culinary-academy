@@ -14,6 +14,7 @@ import javax.persistence.*;
 @Table(name = "student")
 public class Student {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "student_id")
     private int id;
 
@@ -28,4 +29,9 @@ public class Student {
 
     @Column(name = "student_contact")
     private String contact;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_name")
+    private User user;
+
 }

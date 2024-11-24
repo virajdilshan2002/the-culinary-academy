@@ -37,7 +37,7 @@
                </font>
             </Label>
             <TextField layoutX="165.0" layoutY="304.0" prefHeight="25.0" prefWidth="300.0" promptText="Price" styleClass="field1" stylesheets="@../assets/css/style.css" />
-            <JFXButton layoutX="316.0" layoutY="357.0" prefHeight="30.0" prefWidth="149.0" styleClass="btn" stylesheets="@../assets/css/style.css" text="Add">
+            <JFXButton layoutX="316.0" layoutY="357.0" onAction="#btnAddCourseClickOnAction" prefHeight="30.0" prefWidth="149.0" styleClass="btn" stylesheets="@../assets/css/style.css" text="Add">
                <font>
                   <Font name="Unispace-Bold" size="15.0" />
                </font>

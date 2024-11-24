@@ -5,36 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ea0594f-f6dd-4b55-80ac-fe8b39213062" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/AddUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/addUser.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/LauncherWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/CustomerBo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/DashboardBO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/FurnitureBo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/OrderBO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/PlaceOrderBo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/UserBO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/LoginFormController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/db/DBConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dto/CustomerDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dto/FurnitureDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dto/OrderDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dto/OrderDetailDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dto/UserDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/entity/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/entity/Furniture.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/entity/Order.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/entity/OrderDetail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/entity/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/hibernate/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/config/SessionFactoryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/config/SessionFactoryConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/CoursesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/CoursesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/PlacePaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/PlacePaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/StudentCourseDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/OrderDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/courses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/courses.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/placePayment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/placePayment.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,39 +57,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Launcher.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/asus/Desktop/The Culinary Academy/src/main/java/lk/ijse/theculinaryacademy",
-    "last_opened_file_path": "C:/Users/asus/Desktop/ORM Assignment/The Culinary Academy/src/main/resources/lk/ijse/theculinaryacademy/hibernate",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.4586207",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/asus/Desktop/The Culinary Academy/src/main/java/lk/ijse/theculinaryacademy&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/asus/Desktop/ORM Assignment/The Culinary Academy/src/main/java/lk/ijse/theculinaryacademy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.4586207&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql_aurora",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql_aurora&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="lk.ijse.theculinaryacademy.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src\main\java\lk\ijse\theculinaryacademy" />
       <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src\main\resources\lk\ijse\theculinaryacademy\hibernate" />
       <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src" />
-      <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src\main\java\lk\ijse\theculinaryacademy" />
       <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src\main\resources\lk\ijse\theculinaryacademy\assets\icons" />
       <recent name="C:\Users\asus\Desktop\The Culinary Academy\src\main\resources\lk\ijse\theculinaryacademy" />
     </key>
@@ -158,6 +147,8 @@
       <workItem from="1732175520378" duration="8907000" />
       <workItem from="1732267228029" duration="1869000" />
       <workItem from="1732344450335" duration="63000" />
+      <workItem from="1732371607432" duration="4914000" />
+      <workItem from="1732423489000" duration="15709000" />
     </task>
     <servers />
   </component>
