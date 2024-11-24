@@ -11,7 +11,51 @@
 
 <AnchorPane fx:id="rootNode" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.theculinaryacademy.controller.DashboardController">
    <children>
-      <AnchorPane id="body" fx:id="childNode" layoutX="10.0" layoutY="100.0" prefHeight="658.0" prefWidth="1346.0" stylesheets="@../assets/css/dashboard.css" />
+      <AnchorPane id="body" fx:id="childNode" layoutX="10.0" layoutY="100.0" prefHeight="658.0" prefWidth="1346.0" stylesheets="@../assets/css/dashboard.css">
+         <children>
+            <Pane layoutX="68.0" layoutY="80.0" prefHeight="278.0" prefWidth="294.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
+               <children>
+                  <Label layoutX="83.0" layoutY="44.0" text="Courses" textFill="#404040">
+                     <font>
+                        <Font name="Unispace-Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCoursesCount" alignment="CENTER" contentDisplay="CENTER" layoutX="83.0" layoutY="99.0" prefHeight="40.0" prefWidth="128.0" text="0" textAlignment="CENTER" textFill="#404040">
+                     <font>
+                        <Font name="Unispace-Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="411.0" layoutY="80.0" prefHeight="278.0" prefWidth="294.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
+               <children>
+                  <Label layoutX="74.0" layoutY="46.0" text="Students" textFill="#404040">
+                     <font>
+                        <Font name="Unispace-Bold" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblStudentsCount" alignment="CENTER" contentDisplay="CENTER" layoutX="83.0" layoutY="99.0" prefHeight="40.0" prefWidth="128.0" text="0" textAlignment="CENTER" textFill="#404040">
+                     <font>
+                        <Font name="Unispace-Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="68.0" layoutY="400.0" prefHeight="278.0" prefWidth="294.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
+               <children>
+                  <Label alignment="CENTER" ellipsisString="" layoutX="48.0" layoutY="44.0" text="Purchased&#10;Courses Count" textAlignment="CENTER" textFill="#404040">
+                     <font>
+                        <Font name="Unispace-Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblSoldCoursesCount" alignment="CENTER" contentDisplay="CENTER" layoutX="83.0" layoutY="119.0" prefHeight="40.0" prefWidth="128.0" text="0" textAlignment="CENTER" textFill="#404040">
+                     <font>
+                        <Font name="Unispace-Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children></AnchorPane>
       <Pane id="header" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="1346.0" stylesheets="@../assets/css/dashboard.css">
          <children>
             <Label layoutX="608.0" layoutY="18.0" text="The Culinary Academy">

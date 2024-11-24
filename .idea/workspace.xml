@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ea0594f-f6dd-4b55-80ac-fe8b39213062" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/AddUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/addUser.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/config/SessionFactoryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/config/SessionFactoryConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/CoursesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/CoursesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/PlacePaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/PlacePaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/StudentCourseDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/OrderDetail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/courses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/courses.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/placePayment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/placePayment.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="9ea0594f-f6dd-4b55-80ac-fe8b39213062" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,7 +128,7 @@
       <workItem from="1732267228029" duration="1869000" />
       <workItem from="1732344450335" duration="63000" />
       <workItem from="1732371607432" duration="4914000" />
-      <workItem from="1732423489000" duration="15709000" />
+      <workItem from="1732423489000" duration="16413000" />
     </task>
     <servers />
   </component>
