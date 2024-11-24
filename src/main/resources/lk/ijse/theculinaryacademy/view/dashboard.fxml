@@ -13,7 +13,7 @@
    <children>
       <AnchorPane id="body" fx:id="childNode" layoutX="10.0" layoutY="100.0" prefHeight="658.0" prefWidth="1346.0" stylesheets="@../assets/css/dashboard.css">
          <children>
-            <Pane layoutX="68.0" layoutY="80.0" prefHeight="278.0" prefWidth="294.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
+            <Pane layoutX="68.0" layoutY="44.0" prefHeight="278.0" prefWidth="294.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
                <children>
                   <Label layoutX="83.0" layoutY="44.0" text="Courses" textFill="#404040">
                      <font>
@@ -27,7 +27,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="411.0" layoutY="80.0" prefHeight="278.0" prefWidth="294.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
+            <Pane layoutX="409.0" layoutY="44.0" prefHeight="278.0" prefWidth="294.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
                <children>
                   <Label layoutX="74.0" layoutY="46.0" text="Students" textFill="#404040">
                      <font>
@@ -41,7 +41,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="68.0" layoutY="400.0" prefHeight="278.0" prefWidth="294.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
+            <Pane layoutX="68.0" layoutY="349.0" prefHeight="278.0" prefWidth="294.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
                <children>
                   <Label alignment="CENTER" ellipsisString="" layoutX="48.0" layoutY="44.0" text="Purchased&#10;Courses Count" textAlignment="CENTER" textFill="#404040">
                      <font>
@@ -136,6 +136,21 @@
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../assets/icons/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="1222.0" layoutY="15.0" onAction="#btnLogOutClickOnAction" prefHeight="50.0" prefWidth="50.0" styleClass="btn-logout" stylesheets="@../assets/css/dashboard.css" text="Close" textFill="#404040">
+               <font>
+                  <Font name="Agency FB Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/logout.png" />
                      </image>
                   </ImageView>
                </graphic>

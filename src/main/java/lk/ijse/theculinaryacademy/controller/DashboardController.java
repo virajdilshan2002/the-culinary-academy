@@ -4,7 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.theculinaryacademy.config.SessionFactoryConfig;
 import lk.ijse.theculinaryacademy.util.NavigateTo;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
 
 import java.io.IOException;
 
@@ -18,10 +21,32 @@ public class DashboardController {
     private AnchorPane rootNode;
 
     public void initialize() {
-        lblCoursesCount.setText("10");
-        lblStudentsCount.setText("20");
-        lblSoldCoursesCount.setText("5");
+        getStudentCount();
+        getCourseCount();
     }
+
+    private void getCourseCount() {
+        long count = 0;
+        try (Session session = SessionFactoryConfig.getInstance().getSession()) {
+            String hql = "SELECT COUNT(*) FROM Course";
+            count = (long) session.createQuery(hql).uniqueResult();
+        } catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        lblCoursesCount.setText(String.valueOf(count));
+    }
+
+    public void getStudentCount() {
+        long count = 0;
+        try (Session session = SessionFactoryConfig.getInstance().getSession()) {
+            String hql = "SELECT COUNT(*) FROM Student";
+            count = (long) session.createQuery(hql).uniqueResult();
+        } catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        lblCoursesCount.setText(String.valueOf(count));
+    }
+
 
     @FXML
     void btnAdminClickOnAction(ActionEvent event) {
@@ -65,6 +90,14 @@ public class DashboardController {
     public void btnHomeClickOnAction(ActionEvent actionEvent) {
         try {
             NavigateTo.parent("/lk/ijse/theculinaryacademy/view/dashboard.fxml",rootNode);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void btnLogOutClickOnAction(ActionEvent actionEvent) {
+        try {
+            NavigateTo.parent("/lk/ijse/theculinaryacademy/view/login.fxml",rootNode);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

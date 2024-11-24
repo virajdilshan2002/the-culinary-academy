@@ -26,6 +26,15 @@
     -fx-background-color: #ff3d3d ;
 }
 
+.btn-logout{
+    -fx-background-color: #262626;
+    -fx-background-radius: 100;
+}
+
+.btn-logout:hover{
+    -fx-background-color: #3b3b3b ;
+}
+
 .profile-btn{
     -fx-background-color: #7abfff;
     -fx-background-radius: 100;

@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ea0594f-f6dd-4b55-80ac-fe8b39213062" name="Changes" comment="" />
+    <list default="true" id="9ea0594f-f6dd-4b55-80ac-fe8b39213062" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/assets/icons/logout.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/CoursesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/CoursesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/assets/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/assets/css/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/courses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/courses.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/dashboard.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,40 +45,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/asus/Desktop/The Culinary Academy/src/main/java/lk/ijse/theculinaryacademy&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/asus/Desktop/ORM Assignment/The Culinary Academy/src/main/java/lk/ijse/theculinaryacademy&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.4586207&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Launcher.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/asus/Desktop/The Culinary Academy/src/main/java/lk/ijse/theculinaryacademy",
+    "last_opened_file_path": "C:/Users/asus/Desktop/ORM Assignment/The Culinary Academy/src/main/resources/lk/ijse/theculinaryacademy/assets/icons",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Facets",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.4586207",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql_aurora&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora",
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="lk.ijse.theculinaryacademy.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src\main\resources\lk\ijse\theculinaryacademy\assets\icons" />
       <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src\main\java\lk\ijse\theculinaryacademy" />
       <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src\main\resources\lk\ijse\theculinaryacademy\hibernate" />
       <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src" />
-      <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src\main\resources\lk\ijse\theculinaryacademy\assets\icons" />
       <recent name="C:\Users\asus\Desktop\The Culinary Academy\src\main\resources\lk\ijse\theculinaryacademy" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -128,7 +136,7 @@
       <workItem from="1732267228029" duration="1869000" />
       <workItem from="1732344450335" duration="63000" />
       <workItem from="1732371607432" duration="4914000" />
-      <workItem from="1732423489000" duration="16413000" />
+      <workItem from="1732423489000" duration="20661000" />
     </task>
     <servers />
   </component>
