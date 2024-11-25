@@ -17,7 +17,7 @@ public class LoginController {
     public JFXTextField userName;
     public JFXPasswordField password;
     public AnchorPane rootNode;
-    User user = null;
+    public static User user = null;
 
     public void initialize() {
         userName.requestFocus();

@@ -10,10 +10,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.theculinaryacademy.config.SessionFactoryConfig;
 import lk.ijse.theculinaryacademy.model.Course;
-import lk.ijse.theculinaryacademy.tablemodel.CoursesTm;
+import lk.ijse.theculinaryacademy.model.tablemodel.CoursesTm;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.query.Query;
 
 import java.util.List;
 import java.util.Optional;
@@ -62,6 +61,32 @@ public class CoursesController {
         loadCoursesTable();
     }
 
+    public void btnAddCourseClickOnAction(ActionEvent actionEvent) {
+        if (isValid()){
+            Course course = new Course(1,txtCourseDesc.getText(), txtDuration.getText(), Double.parseDouble(txtPrice.getText()));
+
+            Session session = SessionFactoryConfig.getInstance().getSession();
+            Transaction transaction = session.beginTransaction();
+            session.save(course);
+            transaction.commit();
+            session.close();
+
+            loadCoursesTable();
+            new Alert(Alert.AlertType.INFORMATION, "Course added successfully").show();
+        }
+    }
+
+    public void btnCourseSearchClickOnAction(ActionEvent actionEvent) {
+    }
+
+    private void setCellValueFactory() {
+        colCourseId.setCellValueFactory(new PropertyValueFactory<>("courseId"));
+        colDesc.setCellValueFactory(new PropertyValueFactory<>("description"));
+        colDuration.setCellValueFactory(new PropertyValueFactory<>("duration"));
+        colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        colAction.setCellValueFactory(new PropertyValueFactory<>("action"));
+    }
+
     private void loadCoursesTable() {
         tblCourses.getItems().clear();
         Session session = SessionFactoryConfig.getInstance().getSession();
@@ -104,32 +129,6 @@ public class CoursesController {
             }
         });
         return btnDelete;
-    }
-
-    public void btnAddCourseClickOnAction(ActionEvent actionEvent) {
-        if (isValid()){
-            Course course = new Course(1,txtCourseDesc.getText(), txtDuration.getText(), Double.parseDouble(txtPrice.getText()));
-
-            Session session = SessionFactoryConfig.getInstance().getSession();
-            Transaction transaction = session.beginTransaction();
-            session.save(course);
-            transaction.commit();
-            session.close();
-
-            loadCoursesTable();
-            new Alert(Alert.AlertType.INFORMATION, "Course added successfully").show();
-        }
-    }
-
-    public void btnCourseSearchClickOnAction(ActionEvent actionEvent) {
-    }
-
-    private void setCellValueFactory() {
-        colCourseId.setCellValueFactory(new PropertyValueFactory<>("courseId"));
-        colDesc.setCellValueFactory(new PropertyValueFactory<>("description"));
-        colDuration.setCellValueFactory(new PropertyValueFactory<>("duration"));
-        colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
-        colAction.setCellValueFactory(new PropertyValueFactory<>("action"));
     }
 
     private boolean isValid() {

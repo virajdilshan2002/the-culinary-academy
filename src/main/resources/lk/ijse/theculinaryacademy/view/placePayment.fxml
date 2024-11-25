@@ -15,30 +15,24 @@
    <children>
       <Pane layoutX="25.0" layoutY="96.0" prefHeight="500.0" prefWidth="500.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
          <children>
-            <Label alignment="CENTER_RIGHT" layoutX="34.0" layoutY="149.0" prefWidth="120.0" text="Course name:">
+            <Label alignment="CENTER_RIGHT" layoutX="35.0" layoutY="180.0" prefWidth="120.0" text="Description:">
                <font>
                   <Font name="Unispace-Bold" size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="164.0" layoutY="146.0" prefHeight="25.0" prefWidth="300.0" promptText="Course Name" styleClass="field1" stylesheets="@../assets/css/style.css" />
-            <Label alignment="CENTER_RIGHT" layoutX="35.0" layoutY="203.0" prefWidth="120.0" text="Description:">
+            <TextField fx:id="txtCourseDesc" layoutX="165.0" layoutY="177.0" prefHeight="30.0" prefWidth="300.0" promptText="Description" styleClass="field1" stylesheets="@../assets/css/style.css" />
+            <Label alignment="CENTER_RIGHT" layoutX="35.0" layoutY="234.0" prefWidth="120.0" text="Duration:">
                <font>
                   <Font name="Unispace-Bold" size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="165.0" layoutY="200.0" prefHeight="30.0" prefWidth="300.0" promptText="Description" styleClass="field1" stylesheets="@../assets/css/style.css" />
-            <Label alignment="CENTER_RIGHT" layoutX="35.0" layoutY="257.0" prefWidth="120.0" text="Duration:">
+            <Label alignment="CENTER_RIGHT" layoutX="35.0" layoutY="284.0" prefWidth="120.0" text="Price:">
                <font>
                   <Font name="Unispace-Bold" size="15.0" />
                </font>
             </Label>
-            <Label alignment="CENTER_RIGHT" layoutX="35.0" layoutY="307.0" prefWidth="120.0" text="Price:">
-               <font>
-                  <Font name="Unispace-Bold" size="15.0" />
-               </font>
-            </Label>
-            <TextField layoutX="165.0" layoutY="304.0" prefHeight="25.0" prefWidth="300.0" promptText="Price" styleClass="field1" stylesheets="@../assets/css/style.css" />
-            <JFXButton layoutX="176.0" layoutY="363.0" prefHeight="30.0" prefWidth="149.0" styleClass="btn" stylesheets="@../assets/css/style.css" text="Add To Cart">
+            <TextField fx:id="txtPrice" layoutX="165.0" layoutY="281.0" prefHeight="25.0" prefWidth="300.0" promptText="Price" styleClass="field1" stylesheets="@../assets/css/style.css" />
+            <JFXButton layoutX="176.0" layoutY="340.0" onAction="#btnAddToCartClickOnAction" prefHeight="30.0" prefWidth="149.0" styleClass="btn" stylesheets="@../assets/css/style.css" text="Add To Cart">
                <font>
                   <Font name="Unispace-Bold" size="15.0" />
                </font>
@@ -46,7 +40,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <TextField layoutX="165.0" layoutY="254.0" prefHeight="30.0" prefWidth="300.0" promptText="Duration" styleClass="field1" stylesheets="@../assets/css/style.css" />
+            <TextField fx:id="txtDuration" layoutX="165.0" layoutY="231.0" prefHeight="30.0" prefWidth="300.0" promptText="Duration" styleClass="field1" stylesheets="@../assets/css/style.css" />
             <Pane prefHeight="50.0" prefWidth="500.0" styleClass="title-background" stylesheets="@../assets/css/style.css">
                <children>
                   <Label layoutX="14.0" layoutY="12.0" text="Select Courses">
@@ -56,7 +50,7 @@
                   </Label>
                </children>
             </Pane>
-            <JFXButton layoutX="364.0" layoutY="87.0" prefHeight="30.0" prefWidth="100.0" styleClass="btn" stylesheets="@../assets/css/style.css" text="Search">
+            <JFXButton fx:id="btnCourseSelect" layoutX="365.0" layoutY="97.0" onAction="#btnCourseSelectClickOnAction" prefHeight="30.0" prefWidth="100.0" styleClass="btn" stylesheets="@../assets/css/style.css" text="Select">
                <font>
                   <Font name="Unispace-Bold" size="15.0" />
                </font>
@@ -64,7 +58,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <ChoiceBox layoutX="51.0" layoutY="88.0" prefHeight="30.0" prefWidth="290.0" />
+            <ChoiceBox fx:id="choiceCourses" layoutX="52.0" layoutY="98.0" prefHeight="30.0" prefWidth="290.0" />
          </children>
       </Pane>
       <Label layoutX="25.0" layoutY="25.0" text="Place Payment">
@@ -74,7 +68,7 @@
       </Label>
       <Pane layoutX="541.0" layoutY="96.0" prefHeight="122.0" prefWidth="360.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
          <children>
-            <JFXButton layoutX="268.0" layoutY="67.0" prefHeight="33.0" prefWidth="71.0" styleClass="btn" stylesheets="@../assets/css/style.css" text="Select">
+            <JFXButton fx:id="btnStudentSearch" layoutX="245.0" layoutY="67.0" onAction="#btnStudentSearchClickOnAction" prefHeight="33.0" prefWidth="94.0" styleClass="btn" stylesheets="@../assets/css/style.css" text="Search">
                <font>
                   <Font name="Unispace-Bold" size="15.0" />
                </font>
@@ -91,15 +85,7 @@
                   </Label>
                </children>
             </Pane>
-            <TextField alignment="CENTER" layoutX="27.0" layoutY="68.0" prefHeight="25.0" prefWidth="185.0" promptText="Student Contact" styleClass="field1" stylesheets="@../assets/css/style.css" />
-            <JFXButton layoutX="219.0" layoutY="67.0" prefHeight="33.0" prefWidth="41.0" styleClass="btn" stylesheets="@../assets/css/style.css" text="Search">
-               <font>
-                  <Font name="Unispace-Bold" size="15.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </JFXButton>
+            <TextField fx:id="txtStudentSearch" alignment="CENTER" layoutX="27.0" layoutY="68.0" prefHeight="25.0" prefWidth="205.0" promptText="Student Contact" styleClass="field1" stylesheets="@../assets/css/style.css" />
          </children>
       </Pane>
       <Pane layoutX="541.0" layoutY="231.0" prefHeight="366.0" prefWidth="360.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
@@ -113,10 +99,10 @@
                   </Label>
                </children>
             </Pane>
-            <TableView layoutY="50.0" prefHeight="320.0" prefWidth="360.0" styleClass="table" stylesheets="@../assets/css/style.css">
+            <TableView fx:id="tblCart" layoutY="50.0" prefHeight="320.0" prefWidth="360.0" styleClass="table" stylesheets="@../assets/css/style.css">
               <columns>
-                <TableColumn prefWidth="264.79998779296875" text="Description" />
-                <TableColumn prefWidth="93.60003662109375" text="Action" />
+                <TableColumn fx:id="colDescription" prefWidth="264.79998779296875" text="Description" />
+                <TableColumn fx:id="colAction" prefWidth="93.60003662109375" text="Action" />
               </columns>
             </TableView>
          </children>
@@ -137,7 +123,7 @@
                   <Font name="Unispace-Bold" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="169.0" layoutY="69.0" prefHeight="26.0" prefWidth="171.0" text="3000.00">
+            <Label fx:id="lblTotalPrice" layoutX="169.0" layoutY="69.0" prefHeight="26.0" prefWidth="171.0" text="00.00">
                <font>
                   <Font name="Unispace-Bold" size="20.0" />
                </font>
@@ -150,13 +136,13 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <ChoiceBox layoutX="169.0" layoutY="119.0" prefHeight="25.0" prefWidth="171.0" />
+            <ChoiceBox fx:id="choicePaymentMethod" layoutX="169.0" layoutY="119.0" prefHeight="25.0" prefWidth="171.0" />
             <Label alignment="CENTER_RIGHT" layoutX="61.0" layoutY="119.0" prefWidth="100.0" text="Method:">
                <font>
                   <Font name="Unispace-Bold" size="18.0" />
                </font>
             </Label>
-            <TextField alignment="CENTER" layoutX="169.0" layoutY="162.0" prefHeight="25.0" prefWidth="171.0" promptText="Advance Payment" styleClass="field1" stylesheets="@../assets/css/style.css" />
+            <TextField fx:id="txtPaymentAmount" alignment="CENTER" layoutX="169.0" layoutY="162.0" prefHeight="25.0" prefWidth="171.0" promptText="Advance Payment" styleClass="field1" stylesheets="@../assets/css/style.css" />
             <Label alignment="CENTER_RIGHT" layoutX="61.0" layoutY="164.0" prefWidth="100.0" text="Amount:">
                <font>
                   <Font name="Unispace-Bold" size="18.0" />
