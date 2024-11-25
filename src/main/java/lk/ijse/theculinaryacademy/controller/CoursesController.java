@@ -5,10 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.theculinaryacademy.config.SessionFactoryConfig;
@@ -19,6 +16,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.List;
+import java.util.Optional;
 
 public class CoursesController {
     @FXML
@@ -71,9 +69,13 @@ public class CoursesController {
         //get all courses
         List<Course> courseList = session.createQuery("FROM Course", Course.class).getResultList();
 
-        //add courses to the table
+        //add courses to the observable list
         for (Course course : courseList) {
-            JFXButton btnDelete = new JFXButton("Delete");
+
+            //create a delete button for each course
+            JFXButton btnDelete = createDeleteButton(course.getId());
+
+            //create a CoursesTm object for each course
             CoursesTm coursesTm = new CoursesTm(course.getId(),
                     course.getDescription(),
                     course.getDuration(),
@@ -81,7 +83,27 @@ public class CoursesController {
                     btnDelete);
             obList.add(coursesTm);
         }
+
+        //set the observable list to the table
         tblCourses.setItems(obList);
+    }
+
+    private JFXButton createDeleteButton(int id) {
+        JFXButton btnDelete = new JFXButton("Delete");
+        btnDelete.setStyle("-fx-background-color: red; -fx-text-fill: white; -fx-background-radius: 20;");
+        btnDelete.setOnAction(event -> {
+            Optional<ButtonType> buttonType = new Alert(Alert.AlertType.CONFIRMATION, "Do you want to delete this course?", ButtonType.YES, ButtonType.NO).showAndWait();
+            if (buttonType.get() == ButtonType.YES) {
+                Session session = SessionFactoryConfig.getInstance().getSession();
+                Transaction transaction = session.beginTransaction();
+                Course course = session.get(Course.class, id);
+                session.delete(course);
+                transaction.commit();
+                session.close();
+                loadCoursesTable();
+            }
+        });
+        return btnDelete;
     }
 
     public void btnAddCourseClickOnAction(ActionEvent actionEvent) {

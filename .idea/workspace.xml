@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ea0594f-f6dd-4b55-80ac-fe8b39213062" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/tablemodel/CoursesTm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/CoursesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/CoursesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/courses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/courses.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +134,7 @@
       <workItem from="1732371607432" duration="4914000" />
       <workItem from="1732423489000" duration="20661000" />
       <workItem from="1732503508106" duration="170000" />
-      <workItem from="1732535843590" duration="2644000" />
+      <workItem from="1732535843590" duration="3415000" />
     </task>
     <servers />
   </component>
