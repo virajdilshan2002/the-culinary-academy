@@ -8,9 +8,11 @@ module lk.ijse.theculinaryacademy {
     requires java.persistence;
     requires java.sql;
     requires javafx.controls;
+    requires javafx.base;
 
     exports lk.ijse.theculinaryacademy;
     opens lk.ijse.theculinaryacademy.util to javafx.fxml;
     opens lk.ijse.theculinaryacademy.controller to javafx.fxml;
     opens lk.ijse.theculinaryacademy.model to org.hibernate.orm.core;
+    opens lk.ijse.theculinaryacademy.tablemodel to javafx.base;
 }
