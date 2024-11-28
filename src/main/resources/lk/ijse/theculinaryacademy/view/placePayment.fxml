@@ -13,7 +13,7 @@
 
 <AnchorPane id="body" fx:id="childNode" prefHeight="658.0" prefWidth="1346.0" stylesheets="@../assets/css/dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.theculinaryacademy.controller.PlacePaymentController">
    <children>
-      <Pane layoutX="25.0" layoutY="96.0" prefHeight="500.0" prefWidth="500.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
+      <Pane layoutX="25.0" layoutY="96.0" prefHeight="500.0" prefWidth="500.0" styleClass="pane2" stylesheets="@../assets/css/style.css">
          <children>
             <Label alignment="CENTER_RIGHT" layoutX="35.0" layoutY="180.0" prefWidth="120.0" text="Description:">
                <font>
@@ -66,7 +66,7 @@
             <Font name="Unispace-Bold" size="30.0" />
          </font>
       </Label>
-      <Pane layoutX="541.0" layoutY="96.0" prefHeight="122.0" prefWidth="360.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
+      <Pane layoutX="541.0" layoutY="96.0" prefHeight="122.0" prefWidth="360.0" styleClass="pane2" stylesheets="@../assets/css/style.css">
          <children>
             <JFXButton fx:id="btnStudentSearch" layoutX="245.0" layoutY="67.0" onAction="#btnStudentSearchClickOnAction" prefHeight="33.0" prefWidth="94.0" styleClass="btn" stylesheets="@../assets/css/style.css" text="Search">
                <font>
@@ -88,7 +88,7 @@
             <TextField fx:id="txtStudentSearch" alignment="CENTER" layoutX="27.0" layoutY="68.0" prefHeight="25.0" prefWidth="205.0" promptText="Student Contact" styleClass="field1" stylesheets="@../assets/css/style.css" />
          </children>
       </Pane>
-      <Pane layoutX="541.0" layoutY="231.0" prefHeight="366.0" prefWidth="360.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
+      <Pane layoutX="541.0" layoutY="231.0" prefHeight="366.0" prefWidth="360.0" styleClass="pane2" stylesheets="@../assets/css/style.css">
          <children>
             <Pane prefHeight="50.0" prefWidth="360.0" styleClass="title-background" stylesheets="@../assets/css/style.css">
                <children>
@@ -107,7 +107,7 @@
             </TableView>
          </children>
       </Pane>
-      <Pane layoutX="920.0" layoutY="96.0" prefHeight="500.0" prefWidth="400.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
+      <Pane layoutX="920.0" layoutY="96.0" prefHeight="500.0" prefWidth="400.0" styleClass="pane2" stylesheets="@../assets/css/style.css">
          <children>
             <Pane prefHeight="50.0" prefWidth="400.0" styleClass="title-background" stylesheets="@../assets/css/style.css">
                <children>

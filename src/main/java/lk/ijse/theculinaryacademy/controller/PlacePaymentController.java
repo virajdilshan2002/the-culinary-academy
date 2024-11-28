@@ -6,9 +6,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.theculinaryacademy.bo.BOFactory;
+import lk.ijse.theculinaryacademy.bo.custom.PlacePaymentBo;
 import lk.ijse.theculinaryacademy.config.SessionFactoryConfig;
-import lk.ijse.theculinaryacademy.model.*;
-import lk.ijse.theculinaryacademy.model.tablemodel.CartTm;
+import lk.ijse.theculinaryacademy.dto.CourseDTO;
+import lk.ijse.theculinaryacademy.dto.PaymentDTO;
+import lk.ijse.theculinaryacademy.dto.StudentCourseDetailDTO;
+import lk.ijse.theculinaryacademy.dto.StudentDTO;
+import lk.ijse.theculinaryacademy.entity.*;
+import lk.ijse.theculinaryacademy.view.tablemodel.CartTm;
 import lk.ijse.theculinaryacademy.util.NavigateTo;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -57,16 +63,17 @@ public class PlacePaymentController {
     @FXML
     private TextField txtPrice;
 
-
     User currentUser = LoginController.user;
 
     Date currentDate = new Date(System.currentTimeMillis());
     Timestamp currentTimestamp = new Timestamp(System.currentTimeMillis());
 
-    Course selectedCourse = null;
-    Student selectedStudent = null;
+    CourseDTO selectedCourse = null;
+    StudentDTO selectedStudent = null;
 
     double total = 00.00;
+
+    PlacePaymentBo placePaymentBo = (PlacePaymentBo) BOFactory.getInstance().getBO(BOFactory.BOType.PLACEPAYMENT);
 
     public void initialize() {
         setCellValueFactory();
@@ -75,28 +82,15 @@ public class PlacePaymentController {
     }
 
     private void loadCourses() {
-        // Open a Hibernate session
-        Session session = SessionFactoryConfig.getInstance().getSession();
-        try {
-            // Fetch all courses from the database
-            List<Course> courses = session.createQuery("FROM Course", Course.class).getResultList();
-
-
-            // Add courses to the ChoiceBox
-            choiceCourses.getItems().clear(); // Clear existing items if any
-//            choiceCourses.getItems().addAll(courses);
-            for (Course course : courses) {
-                choiceCourses.getItems().add(course.getDescription());
-            }
-            // Optionally set a default selected value
-            if (!courses.isEmpty()) {
-                choiceCourses.setValue(courses.get(0).getDescription()); // Set the first course as default
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            new Alert(Alert.AlertType.ERROR, "Failed to load courses.").show();
-        } finally {
-            session.close();
+        List<CourseDTO> courses = placePaymentBo.getAllCourses();
+        // Add courses to the ChoiceBox
+        choiceCourses.getItems().clear(); // Clear existing items if any
+        for (CourseDTO course : courses) {
+            choiceCourses.getItems().add(course.getDescription());
+        }
+        // Optionally set a default selected value
+        if (!courses.isEmpty()) {
+            choiceCourses.setValue(courses.get(0).getDescription()); // Set the first course as default
         }
     }
 
@@ -127,7 +121,7 @@ public class PlacePaymentController {
         tblCart.getItems().add(cartTm);
     }
 
-    private JFXButton createRemoveButton(Course course) {
+    private JFXButton createRemoveButton(CourseDTO course) {
         JFXButton remove = new JFXButton("Remove");
         remove.setStyle("-fx-background-color: #ff0000; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius:20;");
         remove.setOnAction(event -> {
@@ -147,17 +141,11 @@ public class PlacePaymentController {
     @FXML
     void btnPayClickOnAction(ActionEvent event) {
         if (checkDetails()){
-            Session session = SessionFactoryConfig.getInstance().getSession();
-            Transaction transaction = session.beginTransaction();
-
-            StudentCourseDetail studentCourseDetail = new StudentCourseDetail(1, currentDate, selectedStudent, selectedCourse);
-            session.save(studentCourseDetail);
+            StudentCourseDetailDTO studentCourseDetailDTO = new StudentCourseDetailDTO(1, currentDate, selectedStudent, selectedCourse);
             double balance = selectedCourse.getPrice() - Double.parseDouble(txtPaymentAmount.getText());
-            Payment payment = new Payment(1, choicePaymentMethod.getValue(), currentTimestamp, balance, total, studentCourseDetail);
-            session.save(payment);
-            transaction.commit();
-            session.close();
+            PaymentDTO paymentDTO = new PaymentDTO(1, choicePaymentMethod.getValue(), currentTimestamp, balance, total, studentCourseDetailDTO);
 
+            placePaymentBo.placePayment(studentCourseDetailDTO,paymentDTO);
             new Alert(Alert.AlertType.INFORMATION, "Payment successful.").show();
             reloadChildNode();
         }
@@ -190,23 +178,18 @@ public class PlacePaymentController {
 
     @FXML
     void btnStudentSearchClickOnAction(ActionEvent event) {
-        // Open a Hibernate session
-        Session session = SessionFactoryConfig.getInstance().getSession();
-        try {
             // Retrieve the student from the database based on the student ID
-            selectedStudent = session.createQuery("FROM Student WHERE contact=:student_contact", Student.class)
-                    .setParameter("student_contact", txtStudentSearch.getText())
-                    .uniqueResult();
+            selectedStudent = placePaymentBo.getStudent(txtStudentSearch.getText());
+
+            if (selectedStudent == null) {
+                new Alert(Alert.AlertType.WARNING, "Student not found.").show();
+                return;
+            }
 
             new Alert(Alert.AlertType.INFORMATION, "Student : "+ selectedStudent.getName() +", selected successfully.").show();
             txtStudentSearch.setDisable(true);
             btnStudentSearch.setDisable(true);
-        } catch (Exception e) {
-            e.printStackTrace();
-            new Alert(Alert.AlertType.ERROR, "Failed to retrieve student details.").show();
-        } finally {
-            session.close();
-        }
+
     }
 
     @FXML
@@ -219,27 +202,21 @@ public class PlacePaymentController {
             return;
         }
 
-        // Open a Hibernate session
-        Session session = SessionFactoryConfig.getInstance().getSession();
-        try {
-            // Retrieve the course from the database based on the description
-            selectedCourse = session.createQuery("FROM Course WHERE description = :desc", Course.class)
-                    .setParameter("desc", selectedCourseDescription)
-                    .uniqueResult();
+        // Retrieve the course from the database based on the description
+        selectedCourse = placePaymentBo.getCourse(selectedCourseDescription);
 
-            txtCourseDesc.setText(selectedCourse.getDescription());
-            txtDuration.setText(String.valueOf(selectedCourse.getDuration()));
-            txtPrice.setText(String.valueOf(selectedCourse.getPrice()));
-
-            new Alert(Alert.AlertType.INFORMATION, "Course : "+selectedCourse.getDescription() +", details retrieved successfully.").show();
-            choiceCourses.setDisable(true);
-            btnCourseSelect.setDisable(true);
-        } catch (Exception e) {
-            e.printStackTrace();
-            new Alert(Alert.AlertType.ERROR, "Failed to retrieve course details.").show();
-        } finally {
-            session.close();
+        if (selectedCourse == null) {
+            new Alert(Alert.AlertType.WARNING, "Course not found.").show();
+            return;
         }
+
+        txtCourseDesc.setText(selectedCourse.getDescription());
+        txtDuration.setText(String.valueOf(selectedCourse.getDuration()));
+        txtPrice.setText(String.valueOf(selectedCourse.getPrice()));
+
+        new Alert(Alert.AlertType.INFORMATION, "Course : "+selectedCourse.getDescription() +", details retrieved successfully.").show();
+        choiceCourses.setDisable(true);
+        btnCourseSelect.setDisable(true);
     }
 
 }

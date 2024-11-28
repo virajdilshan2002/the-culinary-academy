@@ -1,4 +1,4 @@
-package lk.ijse.theculinaryacademy.model.tablemodel;
+package lk.ijse.theculinaryacademy.view.tablemodel;
 
 import com.jfoenix.controls.JFXButton;
 import lombok.AllArgsConstructor;
@@ -9,10 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 
-public class CoursesTm {
-    private int courseId;
+public class CartTm {
     private String description;
-    private String duration;
-    private double price;
     private JFXButton action;
 }

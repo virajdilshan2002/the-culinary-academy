@@ -8,10 +8,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.theculinaryacademy.bo.BOFactory;
+import lk.ijse.theculinaryacademy.bo.custom.StudentBo;
 import lk.ijse.theculinaryacademy.config.SessionFactoryConfig;
-import lk.ijse.theculinaryacademy.model.*;
-import lk.ijse.theculinaryacademy.model.tablemodel.CoursesTm;
-import lk.ijse.theculinaryacademy.model.tablemodel.StudentTm;
+import lk.ijse.theculinaryacademy.dto.StudentDTO;
+import lk.ijse.theculinaryacademy.entity.*;
+import lk.ijse.theculinaryacademy.view.tablemodel.StudentTm;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -60,6 +62,8 @@ public class StudentController {
 
     private ObservableList<StudentTm> obList = FXCollections.observableArrayList();
 
+    StudentBo studentBo = (StudentBo) BOFactory.getInstance().getBO(BOFactory.BOType.STUDENT);
+
     public void initialize() {
         setCellValueFactory();
         loadStudentsTable();
@@ -67,14 +71,9 @@ public class StudentController {
 
     public void btnAddStudentClickOnAction(ActionEvent actionEvent) {
         if (isValid()){
-            Student student = new Student(1,txtFullName.getText(),txtAddress.getText(),txtEmail.getText(),txtContact.getText(),currentUser);
+            StudentDTO studentDTO = new StudentDTO(1,txtFullName.getText(),txtAddress.getText(),txtEmail.getText(),txtContact.getText(),currentUser);
 
-            Session session = SessionFactoryConfig.getInstance().getSession();
-            Transaction transaction = session.beginTransaction();
-            session.save(student);
-            transaction.commit();
-            session.close();
-
+            studentBo.addStudent(studentDTO);
             loadStudentsTable();
         }
     }
@@ -90,23 +89,25 @@ public class StudentController {
 
     private void loadStudentsTable() {
         tblStudents.getItems().clear();
-        Session session = SessionFactoryConfig.getInstance().getSession();
 
         //get all courses
-        List<Student> studentList = session.createQuery("FROM Student", Student.class).getResultList();
+        List<StudentDTO> studentList = studentBo.getAllStudents();
+        if (studentList == null) {
+            return;
+        }
 
         //add courses to the observable list
-        for (Student student : studentList) {
+        for (StudentDTO studentDTO : studentList) {
 
             //create a delete button for each course
-            JFXButton btnDelete = createDeleteButton(student.getId());
+            JFXButton btnDelete = createDeleteButton(studentDTO.getId());
 
             //create a CoursesTm object for each course
-            StudentTm studentTm = new StudentTm(student.getId(),
-                    student.getName(),
-                    student.getAddress(),
-                    student.getEmail(),
-                    student.getContact(),
+            StudentTm studentTm = new StudentTm(studentDTO.getId(),
+                    studentDTO.getName(),
+                    studentDTO.getAddress(),
+                    studentDTO.getEmail(),
+                    studentDTO.getContact(),
                     btnDelete);
             obList.add(studentTm);
         }

@@ -6,7 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.AnchorPane;
 import lk.ijse.theculinaryacademy.config.SessionFactoryConfig;
-import lk.ijse.theculinaryacademy.model.User;
+import lk.ijse.theculinaryacademy.entity.User;
 import lk.ijse.theculinaryacademy.util.NavigateTo;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;

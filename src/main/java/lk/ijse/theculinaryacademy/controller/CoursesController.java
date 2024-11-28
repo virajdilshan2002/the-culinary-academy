@@ -8,9 +8,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.theculinaryacademy.bo.BOFactory;
+import lk.ijse.theculinaryacademy.bo.custom.CourseBo;
 import lk.ijse.theculinaryacademy.config.SessionFactoryConfig;
-import lk.ijse.theculinaryacademy.model.Course;
-import lk.ijse.theculinaryacademy.model.tablemodel.CoursesTm;
+import lk.ijse.theculinaryacademy.dto.CourseDTO;
+import lk.ijse.theculinaryacademy.entity.Course;
+import lk.ijse.theculinaryacademy.view.tablemodel.CoursesTm;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -26,9 +29,6 @@ public class CoursesController {
 
     @FXML
     private TableColumn<?, ?> colCourseId;
-
-    @FXML
-    private TableColumn<?, ?> colCourseName;
 
     @FXML
     private TableColumn<?, ?> colDesc;
@@ -56,6 +56,8 @@ public class CoursesController {
 
     ObservableList<CoursesTm> obList = FXCollections.observableArrayList();
 
+    CourseBo courseBo = (CourseBo) BOFactory.getInstance().getBO(BOFactory.BOType.COURSE);
+
     public void initialize() {
         setCellValueFactory();
         loadCoursesTable();
@@ -63,14 +65,8 @@ public class CoursesController {
 
     public void btnAddCourseClickOnAction(ActionEvent actionEvent) {
         if (isValid()){
-            Course course = new Course(1,txtCourseDesc.getText(), txtDuration.getText(), Double.parseDouble(txtPrice.getText()));
-
-            Session session = SessionFactoryConfig.getInstance().getSession();
-            Transaction transaction = session.beginTransaction();
-            session.save(course);
-            transaction.commit();
-            session.close();
-
+            CourseDTO course = new CourseDTO(1,txtCourseDesc.getText(), txtDuration.getText(), Double.parseDouble(txtPrice.getText()));
+            courseBo.addCourse(course);
             loadCoursesTable();
             new Alert(Alert.AlertType.INFORMATION, "Course added successfully").show();
         }
@@ -89,14 +85,11 @@ public class CoursesController {
 
     private void loadCoursesTable() {
         tblCourses.getItems().clear();
-        Session session = SessionFactoryConfig.getInstance().getSession();
 
-        //get all courses
-        List<Course> courseList = session.createQuery("FROM Course", Course.class).getResultList();
+        List<CourseDTO> courseList = courseBo.getCourses();
 
         //add courses to the observable list
-        for (Course course : courseList) {
-
+        for (CourseDTO course : courseList) {
             //create a delete button for each course
             JFXButton btnDelete = createDeleteButton(course.getId());
 

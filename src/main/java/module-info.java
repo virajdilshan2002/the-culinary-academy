@@ -13,6 +13,6 @@ module lk.ijse.theculinaryacademy {
     exports lk.ijse.theculinaryacademy;
     opens lk.ijse.theculinaryacademy.util to javafx.fxml;
     opens lk.ijse.theculinaryacademy.controller to javafx.fxml;
-    opens lk.ijse.theculinaryacademy.model to org.hibernate.orm.core;
-    opens lk.ijse.theculinaryacademy.model.tablemodel to javafx.base;
+    opens lk.ijse.theculinaryacademy.entity to org.hibernate.orm.core;
+    opens lk.ijse.theculinaryacademy.view.tablemodel to javafx.base;
 }

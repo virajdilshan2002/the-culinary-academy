@@ -1,15 +1,17 @@
 package lk.ijse.theculinaryacademy.controller;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.theculinaryacademy.bo.BOFactory;
+import lk.ijse.theculinaryacademy.bo.custom.UserBO;
 import lk.ijse.theculinaryacademy.config.SessionFactoryConfig;
-import lk.ijse.theculinaryacademy.model.User;
+import lk.ijse.theculinaryacademy.dto.UserDTO;
+import lk.ijse.theculinaryacademy.entity.User;
 import lk.ijse.theculinaryacademy.util.NavigateTo;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -23,6 +25,8 @@ public class AddUserController {
     public TextField txtUserName;
     public AnchorPane rootNode;
 
+    UserBO userBO = (UserBO) BOFactory.getInstance().getBO(BOFactory.BOType.USER);
+
     public void initialize(){
         ObservableList<String> jobRoleList = FXCollections.observableArrayList("Admin", "User");
         choiceJobRole.setItems(jobRoleList);
@@ -31,12 +35,10 @@ public class AddUserController {
 
     public void btnRegisterClickOnAction(ActionEvent actionEvent) {
         if (txtPw.getText().equals(txtRePw.getText())){
-            User user = new User(txtUserName.getText(),txtPw.getText(), (String) choiceJobRole.getValue());
-            Session userSaveSession = SessionFactoryConfig.getInstance().getSession();
-            Transaction transaction = userSaveSession.beginTransaction();
-            userSaveSession.save(user);
-            transaction.commit();
-            userSaveSession.close();
+            UserDTO userDTO = new UserDTO(txtUserName.getText(),txtPw.getText(), (String) choiceJobRole.getValue());
+
+            userBO.addUser(userDTO);
+
             btnBackToLoginClickOnAction(actionEvent);
         }else {
             new Alert(Alert.AlertType.ERROR,"Password Mismatch").show();

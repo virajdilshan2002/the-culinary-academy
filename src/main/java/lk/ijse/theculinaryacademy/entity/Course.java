@@ -1,4 +1,4 @@
-package lk.ijse.theculinaryacademy.model;
+package lk.ijse.theculinaryacademy.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,19 +1,20 @@
-package lk.ijse.theculinaryacademy.model.tablemodel;
+package lk.ijse.theculinaryacademy.dto;
 
-import com.jfoenix.controls.JFXButton;
+import lk.ijse.theculinaryacademy.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-
-public class StudentTm {
-    private int studentId;
-    private String fullName;
+public class StudentDTO {
+    private int id;
+    private String name;
     private String address;
     private String email;
     private String contact;
-    private JFXButton action;
+    private User user;
 }

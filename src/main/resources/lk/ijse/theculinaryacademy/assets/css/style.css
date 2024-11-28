@@ -1,9 +1,14 @@
 .pane1 {
-    -fx-background-color: white;
+    -fx-background-color: #A0E9FF;
     -fx-background-radius: 20;
-    -fx-border-color: #dbdbdb;
+    -fx-border-color:#CDF5FD;
     -fx-border-radius: 20;
     -fx-border-width: 1;
+}
+
+.pane2 {
+    -fx-background-color: #89CFF3;
+    -fx-background-radius: 20;
 }
 
 .table {
