@@ -22,6 +22,8 @@ import java.util.Optional;
 
 public class StudentController {
 
+    public TextField txtSearchContact;
+    public JFXButton btnUpdate;
     @FXML
     private AnchorPane childNode;
 
@@ -59,6 +61,8 @@ public class StudentController {
     private TextField txtFullName;
 
     User currentUser = LoginController.user;
+
+    StudentDTO searchStudent = null;
 
     private ObservableList<StudentTm> obList = FXCollections.observableArrayList();
 
@@ -152,6 +156,54 @@ public class StudentController {
             return false;
         }
         return true;
+    }
+
+    public void btnSearchStudentClickOnAction(ActionEvent actionEvent) {
+        searchStudent = studentBo.search(txtSearchContact.getText());
+        if (searchStudent == null){
+            new Alert(Alert.AlertType.ERROR,"No student found").show();
+            return;
+        }
+        txtFullName.setText(searchStudent.getName());
+        txtAddress.setText(searchStudent.getAddress());
+        txtEmail.setText(searchStudent.getEmail());
+        txtContact.setText(searchStudent.getContact());
+
+        new Alert(Alert.AlertType.INFORMATION,"Student found").show();
+    }
+
+    public void btnUpdateClickOnAction(ActionEvent actionEvent) {
+        if (searchStudent == null){
+            new Alert(Alert.AlertType.WARNING,"Select student first").show();
+            return;
+        }
+
+        StudentDTO studentDTO = new StudentDTO(searchStudent.getId(),
+                txtFullName.getText(),
+                txtAddress.getText(),
+                txtEmail.getText(),
+                txtContact.getText(),
+                currentUser
+        );
+
+        try{
+            boolean isupdate = studentBo.update(studentDTO);
+            if (isupdate){
+                new Alert(Alert.AlertType.INFORMATION,"Course updated!").show();
+                loadStudentsTable();
+            }
+        }catch (Exception e){
+            new Alert(Alert.AlertType.ERROR,"something went wrong ").show();
+        }
+        clearFields();
+
+    }
+
+    private void clearFields() {
+        txtFullName.clear();
+        txtAddress.clear();
+        txtEmail.clear();
+        txtContact.clear();
     }
 }
 

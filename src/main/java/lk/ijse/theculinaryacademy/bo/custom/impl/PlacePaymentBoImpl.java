@@ -46,7 +46,7 @@ public class PlacePaymentBoImpl implements PlacePaymentBo {
 
     @Override
     public StudentDTO getStudent(String contact) {
-        Student student = studentDAO.getStudent(contact);
+        Student student = studentDAO.searchByContact(contact);
         return new StudentDTO(student.getId(),
                 student.getName(),
                 student.getAddress(),

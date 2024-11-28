@@ -27,10 +27,31 @@ public class StudentDAOImpl implements StudentDAO {
     }
 
     @Override
-    public Student getStudent(String contact) {
+    public Student searchByContact(String contact) {
         Session session = SessionFactoryConfig.getInstance().getSession();
         return session.createQuery("FROM Student WHERE contact=:student_contact", Student.class)
                 .setParameter("student_contact", contact)
                 .uniqueResult();
     }
+
+    @Override
+    public boolean updateStudent(Student student) {
+        Transaction transaction = null;
+        try (Session session = SessionFactoryConfig.getInstance().getSession()) {
+            transaction = session.beginTransaction();
+
+            session.update(student);
+
+            transaction.commit();
+            return true;
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            System.err.println("Failed to update student: " + e.getMessage());
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 }

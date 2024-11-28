@@ -33,4 +33,24 @@ public class CourseBoImpl implements CourseBo {
         }
         return courseDTOS;
     }
+
+    @Override
+    public CourseDTO search(int id) {
+        Course course = courseDAO.searchById(id);
+        return new CourseDTO(course.getId(),
+                course.getDescription(),
+                course.getDuration(),
+                course.getPrice()
+        );
+    }
+
+    @Override
+    public boolean update(CourseDTO dto) {
+        Course course = new Course(dto.getId(),
+                dto.getDescription(),
+                dto.getDuration(),
+                dto.getPrice()
+        );
+        return courseDAO.updateCourse(course);
+    }
 }

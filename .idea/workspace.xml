@@ -5,60 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ea0594f-f6dd-4b55-80ac-fe8b39213062" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/BOFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/SuperBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/CourseBo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/DashboardBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/PaymentBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/PlacePaymentBo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/StudentBo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/UserBO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/impl/CourseBoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/impl/DashboardBoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/impl/PaymentBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/impl/PlacePaymentBoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/impl/StudentBoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/impl/UserBOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/CrudDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/DAOFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/CourseDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/PaymentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/StudentCourseDetailDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/StudentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/impl/CourseDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/impl/PaymentDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/impl/StudentCourseDetailDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/impl/StudentDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/impl/UserDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/entity/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/entity/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/entity/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/entity/StudentCourseDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/view/tablemodel/RecentPaymentsTm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/assets/images/culinary_academy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/assets/images/culinary_academy_2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/config/SessionFactoryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/config/SessionFactoryConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/AddUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/AddUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/CourseBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/CourseBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/DashboardBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/DashboardBO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/StudentBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/StudentBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/impl/CourseBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/impl/CourseBoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/impl/DashboardBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/impl/DashboardBoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/impl/PlacePaymentBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/impl/PlacePaymentBoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/impl/StudentBoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/bo/custom/impl/StudentBoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/CoursesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/CoursesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/PlacePaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/PlacePaymentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dto/CourseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dto/PaymentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dto/StudentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/StudentCourseDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dto/StudentCourseDetailDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/tablemodel/CartTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/view/tablemodel/CartTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/tablemodel/CoursesTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/view/tablemodel/CoursesTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/model/tablemodel/StudentTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/view/tablemodel/StudentTm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/CourseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/CourseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/StudentDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/impl/CourseDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/impl/CourseDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/impl/PaymentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/impl/PaymentDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/impl/StudentDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/theculinaryacademy/dao/custom/impl/StudentDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/assets/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/assets/css/dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/courses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/courses.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/placePayment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/placePayment.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/student.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/lk/ijse/theculinaryacademy/view/student.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,41 +62,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Launcher.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/asus/Desktop/The Culinary Academy/src/main/java/lk/ijse/theculinaryacademy",
-    "last_opened_file_path": "C:/Users/asus/Desktop/ORM Assignment/The Culinary Academy/src/main/java/lk/ijse/theculinaryacademy",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Facets",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.4586207",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/asus/Desktop/The Culinary Academy/src/main/java/lk/ijse/theculinaryacademy&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/asus/Desktop/ORM Assignment/The Culinary Academy/src/main/resources/lk/ijse/theculinaryacademy/assets/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.4586207&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql_aurora",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql_aurora&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="lk.ijse.theculinaryacademy.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src\main\resources\lk\ijse\theculinaryacademy\assets\images" />
       <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src\main\java\lk\ijse\theculinaryacademy" />
       <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src\main\java\lk\ijse\theculinaryacademy\dto" />
       <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src\main\resources\lk\ijse\theculinaryacademy\assets\icons" />
       <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src\main\resources\lk\ijse\theculinaryacademy\hibernate" />
-      <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\asus\Desktop\ORM Assignment\The Culinary Academy\src\main\resources" />
@@ -191,7 +160,9 @@
       <workItem from="1732503508106" duration="170000" />
       <workItem from="1732535843590" duration="12744000" />
       <workItem from="1732721553627" duration="4427000" />
-      <workItem from="1732726083375" duration="22609000" />
+      <workItem from="1732726083375" duration="23035000" />
+      <workItem from="1732802835070" duration="3091000" />
+      <workItem from="1732805955018" duration="5137000" />
     </task>
     <servers />
   </component>

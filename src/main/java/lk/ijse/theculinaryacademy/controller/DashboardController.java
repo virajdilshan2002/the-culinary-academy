@@ -13,6 +13,7 @@ import javafx.util.Duration;
 import lk.ijse.theculinaryacademy.bo.BOFactory;
 import lk.ijse.theculinaryacademy.bo.custom.DashboardBO;
 import lk.ijse.theculinaryacademy.config.SessionFactoryConfig;
+import lk.ijse.theculinaryacademy.dto.PaymentDTO;
 import lk.ijse.theculinaryacademy.dto.StudentCourseDetailDTO;
 import lk.ijse.theculinaryacademy.entity.Payment;
 import lk.ijse.theculinaryacademy.view.tablemodel.RecentPaymentsTm;
@@ -60,16 +61,12 @@ public class DashboardController {
     }
 
     private void loadRecentPayments() {
-        try (Session session = SessionFactoryConfig.getInstance().getSession()) {
-            // Query to fetch the most recent payments (limit to, say, 10 records)
-            String hql = "FROM Payment p ORDER BY p.orderDateTime DESC";
-            List<Payment> payments = session.createQuery(hql, Payment.class)
-                    .setMaxResults(10)
-                    .list();
+
+            List<PaymentDTO> payments = dashboardBO.getRecentPayments();
 
             ObservableList<RecentPaymentsTm> recentPayments = FXCollections.observableArrayList();
 
-            for (Payment payment : payments) {
+            for (PaymentDTO payment : payments) {
                 RecentPaymentsTm tm = new RecentPaymentsTm(
                         payment.getId(),
                         payment.getStudentCourseDetail().getStudent().getName(),
@@ -81,12 +78,8 @@ public class DashboardController {
             }
 
             tblRecentPayments.setItems(recentPayments);
-        } catch (HibernateException e) {
-            e.printStackTrace();
-        }
     }
-
-
+    
     private void setCellValueFactory() {
         colPaymentId.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("paymentId"));
         colStudent.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory<>("student"));

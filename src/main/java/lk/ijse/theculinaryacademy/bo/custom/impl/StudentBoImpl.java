@@ -43,4 +43,29 @@ public class StudentBoImpl implements StudentBo {
         }
         return studentDTOS;
     }
+
+    @Override
+    public StudentDTO search(String contact) {
+        Student student = studentDAO.searchByContact(contact);
+        return new StudentDTO(
+                student.getId(),
+                student.getName(),
+                student.getAddress(),
+                student.getEmail(),
+                student.getContact(),
+                student.getUser()
+        );
+    }
+
+    @Override
+    public boolean update(StudentDTO dto) {
+        Student student = new Student(dto.getId(),
+                dto.getName(),
+                dto.getAddress(),
+                dto.getEmail(),
+                dto.getContact(),
+                dto.getUser()
+        );
+        return studentDAO.updateStudent(student);
+    }
 }

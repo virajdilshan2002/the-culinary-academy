@@ -1,6 +1,7 @@
 package lk.ijse.theculinaryacademy.dao.custom.impl;
 
 
+import lk.ijse.theculinaryacademy.config.SessionFactoryConfig;
 import lk.ijse.theculinaryacademy.dao.custom.PaymentDAO;
 import lk.ijse.theculinaryacademy.entity.Payment;
 import org.hibernate.Session;
@@ -16,7 +17,11 @@ public class PaymentDAOImpl implements PaymentDAO {
 
     @Override
     public List<Payment> getAll() {
-        return List.of();
+        String hql = "FROM Payment p ORDER BY p.orderDateTime DESC";
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        return session.createQuery(hql, Payment.class)
+                .setMaxResults(10)
+                .list();
     }
 
     @Override

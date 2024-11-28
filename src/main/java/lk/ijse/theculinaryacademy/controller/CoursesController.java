@@ -12,6 +12,7 @@ import lk.ijse.theculinaryacademy.bo.BOFactory;
 import lk.ijse.theculinaryacademy.bo.custom.CourseBo;
 import lk.ijse.theculinaryacademy.config.SessionFactoryConfig;
 import lk.ijse.theculinaryacademy.dto.CourseDTO;
+import lk.ijse.theculinaryacademy.dto.StudentDTO;
 import lk.ijse.theculinaryacademy.entity.Course;
 import lk.ijse.theculinaryacademy.view.tablemodel.CoursesTm;
 import org.hibernate.Session;
@@ -54,6 +55,8 @@ public class CoursesController {
     @FXML
     private TextField txtSearchCourseId;
 
+    CourseDTO searchCourse = null;
+
     ObservableList<CoursesTm> obList = FXCollections.observableArrayList();
 
     CourseBo courseBo = (CourseBo) BOFactory.getInstance().getBO(BOFactory.BOType.COURSE);
@@ -70,9 +73,6 @@ public class CoursesController {
             loadCoursesTable();
             new Alert(Alert.AlertType.INFORMATION, "Course added successfully").show();
         }
-    }
-
-    public void btnCourseSearchClickOnAction(ActionEvent actionEvent) {
     }
 
     private void setCellValueFactory() {
@@ -150,4 +150,47 @@ public class CoursesController {
         return true;
     }
 
+    public void btnCourseSearchClickOnAction(ActionEvent actionEvent) {
+        searchCourse = courseBo.search(Integer.parseInt(txtSearchCourseId.getText()));
+        if (searchCourse == null){
+            new Alert(Alert.AlertType.ERROR,"No Course found").show();
+            return;
+        }
+        txtCourseDesc.setText(searchCourse.getDescription());
+        txtDuration.setText(searchCourse.getDuration());
+        txtPrice.setText(String.valueOf(searchCourse.getPrice()));
+
+        new Alert(Alert.AlertType.INFORMATION,"Course found").show();
+    }
+
+    public void btnUpdateCourseClickOnAction(ActionEvent actionEvent) {
+        if (searchCourse == null){
+            new Alert(Alert.AlertType.WARNING,"Select course first").show();
+            return;
+        }
+
+        CourseDTO courseDTO = new CourseDTO(searchCourse.getId(),
+                txtCourseDesc.getText(),
+                txtDuration.getText(),
+                Double.parseDouble(txtPrice.getText())
+        );
+
+        try{
+            boolean isupdate = courseBo.update(courseDTO);
+            if (isupdate){
+                new Alert(Alert.AlertType.INFORMATION,"Course updated!").show();
+                loadCoursesTable();
+            }
+        }catch (Exception e){
+            new Alert(Alert.AlertType.ERROR,"something went wrong ").show();
+        }
+        clearFields();
+
+    }
+
+    private void clearFields() {
+        txtCourseDesc.clear();
+        txtDuration.clear();
+        txtPrice.clear();
+    }
 }

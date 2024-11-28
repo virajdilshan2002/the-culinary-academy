@@ -20,12 +20,11 @@
                <children>
                   <TableView fx:id="tblRecentPayments" layoutX="15.0" layoutY="267.0" prefHeight="282.0" prefWidth="910.0" styleClass="table" stylesheets="@../assets/css/style.css">
                      <columns>
-                        <TableColumn fx:id="colPaymentId" prefWidth="76.800048828125" text="Order Id" />
-                        <TableColumn fx:id="colStudent" minWidth="0.0" prefWidth="163.199951171875" text="Student" />
-                        <TableColumn fx:id="colCourse" prefWidth="162.4000244140625" text="Course" />
-                        <TableColumn fx:id="colDate" prefWidth="206.39996337890625" text="Date" />
-                        <TableColumn fx:id="colContact" prefWidth="142.39996337890625" text="Contact" />
-                        <TableColumn fx:id="colTotal" prefWidth="151.2000732421875" text="Total" />
+                        <TableColumn fx:id="colPaymentId" prefWidth="104.80001831054688" text="Order Id" />
+                        <TableColumn fx:id="colStudent" minWidth="0.0" prefWidth="195.99993896484375" text="Student" />
+                        <TableColumn fx:id="colCourse" prefWidth="239.20001220703125" text="Course" />
+                        <TableColumn fx:id="colDate" prefWidth="193.59991455078125" text="Date" />
+                        <TableColumn fx:id="colTotal" prefWidth="175.20001220703125" text="Total" />
                      </columns>
                   </TableView>
                   <Label layoutX="17.0" layoutY="211.0" text="Recent Orders" textFill="#303030">
@@ -67,7 +66,8 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </JFXButton>
-               </children></Pane>
+               </children>
+            </Pane>
             <Pane layoutX="33.0" layoutY="43.0" prefHeight="580.0" prefWidth="320.0" styleClass="pane2" stylesheets="@../assets/css/style.css">
                <children>
                   <Pane layoutX="15.0" layoutY="28.0" prefHeight="150.0" prefWidth="290.0" styleClass="pane1" stylesheets="@../assets/css/style.css">
@@ -114,7 +114,8 @@
                   </Pane>
                </children>
             </Pane>
-         </children></AnchorPane>
+         </children>
+      </AnchorPane>
       <Pane id="header" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="1346.0" stylesheets="@../assets/css/dashboard.css">
          <children>
             <Label layoutX="608.0" layoutY="18.0" text="The Culinary Academy" textFill="#303030">
@@ -122,7 +123,7 @@
                   <Font name="Modern No. 20" size="40.0" />
                </font>
             </Label>
-            <JFXButton layoutX="145.0" layoutY="20.0" onAction="#btnAdminClickOnAction" prefHeight="40.0" prefWidth="100.0" styleClass="btn" stylesheets="@../assets/css/dashboard.css" text="Admin" textFill="WHITE">
+            <JFXButton disable="true" layoutX="145.0" layoutY="20.0" onAction="#btnAdminClickOnAction" prefHeight="40.0" prefWidth="100.0" styleClass="btn" stylesheets="@../assets/css/dashboard.css" text="Admin" textFill="WHITE">
                <font>
                   <Font name="Agency FB Bold" size="16.0" />
                </font>
@@ -169,7 +170,7 @@
                   </ImageView>
                </graphic>
             </JFXButton>
-            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="14.0" layoutY="15.0" onAction="#btnProfileClickOnAction" prefHeight="50.0" prefWidth="50.0" styleClass="profile-btn" stylesheets="@../assets/css/dashboard.css" text="Home" textFill="#404040">
+            <JFXButton contentDisplay="GRAPHIC_ONLY" disable="true" layoutX="14.0" layoutY="15.0" onAction="#btnProfileClickOnAction" prefHeight="50.0" prefWidth="50.0" styleClass="profile-btn" stylesheets="@../assets/css/dashboard.css" text="Home" textFill="#404040">
                <font>
                   <Font name="Agency FB Bold" size="16.0" />
                </font>

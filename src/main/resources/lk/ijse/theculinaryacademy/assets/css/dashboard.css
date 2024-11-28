@@ -11,11 +11,14 @@
 
 #header{
     -fx-background-color: #A0E9FF;
+    /*-fx-background-color: rgba(160, 233, 255, 0.9);*/
     -fx-background-radius: 40;
 }
 
+
 #body{
     -fx-background-color: #A0E9FF;
+    /*-fx-background-color: rgba(160, 233, 255, 0.9);*/
     -fx-background-radius: 40;
 }
 
@@ -28,13 +31,11 @@
     -fx-background-color: #ff3d3d ;
 }
 
-
 .home-btn,
 .profile-btn,
 .logout-btn{
     -fx-background-radius: 100;
     -fx-background-color: #CDF5FD;
-
 }
 
 .home-btn:hover,

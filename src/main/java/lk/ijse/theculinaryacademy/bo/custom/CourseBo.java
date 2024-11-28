@@ -11,4 +11,8 @@ public interface CourseBo extends SuperBO {
      void addCourse(CourseDTO course);
 
      List<CourseDTO> getCourses();
+
+    CourseDTO search(int id);
+
+    boolean update(CourseDTO dto);
 }

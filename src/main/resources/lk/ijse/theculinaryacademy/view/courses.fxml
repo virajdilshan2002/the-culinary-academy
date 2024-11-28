@@ -49,8 +49,16 @@
                   </Label>
                </children>
             </Pane>
-            <TextField fx:id="txtSearchCourseId" alignment="CENTER" disable="true" layoutX="165.0" layoutY="88.0" prefHeight="25.0" prefWidth="185.0" promptText="Course Id" styleClass="field1" stylesheets="@../assets/css/style.css" />
-            <JFXButton disable="true" layoutX="364.0" layoutY="87.0" onAction="#btnCourseSearchClickOnAction" prefHeight="30.0" prefWidth="100.0" styleClass="btn" stylesheets="@../assets/css/style.css" text="Search">
+            <TextField fx:id="txtSearchCourseId" alignment="CENTER" layoutX="165.0" layoutY="88.0" prefHeight="25.0" prefWidth="185.0" promptText="Course Id" styleClass="field1" stylesheets="@../assets/css/style.css" />
+            <JFXButton layoutX="364.0" layoutY="87.0" onAction="#btnCourseSearchClickOnAction" prefHeight="30.0" prefWidth="100.0" styleClass="btn" stylesheets="@../assets/css/style.css" text="Search">
+               <font>
+                  <Font name="Unispace-Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="155.0" layoutY="312.0" onAction="#btnUpdateCourseClickOnAction" prefHeight="30.0" prefWidth="149.0" styleClass="update-btn" stylesheets="@../assets/css/style.css" text="Update">
                <font>
                   <Font name="Unispace-Bold" size="15.0" />
                </font>
